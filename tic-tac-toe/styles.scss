@@ -1,0 +1,147 @@
+$darkGrey: rgb(66, 66, 66);
+$lavender: #7d7dcd;
+$border: 3px solid $lavender;
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@mixin hoverToken {
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 125px;
+    width: 125px;
+}
+body {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    max-height: 100%;
+    width: 100vw;
+    max-width: 100%;
+}
+
+.board {
+    margin: 5px 50px 30px 50px;
+    height: 375px;
+    width: 375px;
+    display: flex;
+    flex-flow: row wrap;
+
+    //when it's o's turn, show possible moves
+    &.X {
+        .box:not(.X):not(.O) {
+            &:hover::before {
+                @include hoverToken();
+                content: url(./assets/o-symbol.png);
+                opacity: 0.5;
+            }
+        }
+    }
+    //when it's x-s turn, show possible moves
+    &.O {
+        .box:not(.O):not(.X) {
+            &:hover::before {
+                @include hoverToken();
+                content: url(./assets/x-symbol.png);
+                opacity: 0.5;
+                height: 125px;
+                width: 125px;
+            }
+        }
+    }
+
+    .box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        cursor: pointer;
+        border: $border;
+        height: 125px;
+        width: 125px;
+        flex-basis: 33.333333%;
+        &.X::before {
+            content: url(./assets/x-symbol.png);
+        }
+        &.O::before {
+            content: url(./assets/o-symbol.png);
+        }
+    }
+
+    //remove borders to make board
+    .box:first-child,
+    .box:nth-child(2),
+    .box:nth-child(3) {
+        border-top: none;
+    }
+    .box:nth-child(3n+1) {
+        border-left: none;
+    }
+    .box:nth-child(3n+3) {
+        border-right: none;
+    }
+    .box:nth-child(7),
+    .box:nth-child(8),
+    .box:last-child {
+        border-bottom: none;
+    }
+
+    //when a box is filled
+    .token {
+        cursor: not-allowed;
+    }
+}
+
+.gameOver {
+    display: flex;
+    //fixed position so it shows up over the game board
+    position: fixed;
+    background-color: rgba(66, 66, 66, 0.95);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    max-height: 100%;
+    max-width: 100%;
+    h1 {
+        font-size: 39px;
+        color: $lavender;
+    }
+    .newGame {
+        cursor: pointer;
+        border: none;
+        padding: 7px 11px;
+        margin: 11px;
+        min-height: 35px;
+        min-width: 120px;
+        border-radius: 7px;
+        color: $darkGrey;
+        font-size: 18px;
+        text-transform: uppercase;
+        background-color: $lavender;
+        &:hover {
+            color: $lavender;
+            background-color: $darkGrey;
+        }
+    }
+}
+
+.hidden {
+    display: none !important;
+}
