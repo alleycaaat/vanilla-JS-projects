@@ -73,7 +73,7 @@ const showWinner = (currPlayer) => {
 };
 
 const drawGame = () => {
-    winner.onpointerenter = 'It`s a draw!';
+    winner.innerText = 'It`s a draw!';
 };
 
 const resetButton = () => {
