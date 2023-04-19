@@ -68,11 +68,11 @@ const checkForWin = (currPlayer) => {
 
 const showWinner = (currPlayer) => {
     gameOver.classList.remove('hidden');
-
     winner.innerText = `${ currPlayer }'s win!`;
 };
 
 const drawGame = () => {
+	gameOver.classList.remove('hidden');
     winner.innerText = 'It`s a draw!';
 };
 
