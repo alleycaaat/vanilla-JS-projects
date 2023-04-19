@@ -8,14 +8,11 @@ This repo is composed of vanilla JavaScript projects.  All projects were develop
 
 ![last commit][last-commit]
 ![repo size][repo-size]
-![language count][language-count]
 ![main language][main-language]
 
-<br>
 
 ## <strong>Project Previews, Links and Details</strong>
 
-<br>
 
 ### <strong>Calculator</strong>
 ![A calculator with aquamarine buttons and a screen displaying '43110'](./assets/js-calculator.png)
