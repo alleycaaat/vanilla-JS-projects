@@ -6,6 +6,11 @@
         <meta name='viewport' content='width=device-width, initial-scale=1.0'>
         <link rel='stylesheet' href='styles.css'>
         <script src='scripts.js' defer></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:wght@400;700&display=swap"
+            rel="stylesheet">
         <title>JavaScript Calculator - AC Hulslander</title>
     </head>
     <body>
@@ -16,6 +21,9 @@
                     <p class='results'></p>
                 </div>
                 <div class='keypad'>
+                    <label class='sr-only' for='AC'>Press the escape button to
+                        clear the display completely.
+                    </label>
                     <div class='leftCol'>
                         <button class='key op' value='*'>*</button>
                         <button class='key op' value='-'>-</button>
@@ -36,7 +44,7 @@
                     <div class='rightCol'>
                         <button class='key op' value='/'>/</button>
                         <button class='key' value='equals'>=</button>
-                        <button class='key' value='me'>AC</button>
+                        <button id='AC' class='key' value='me'>AC</button>
                     </div>
                 </div>
             </div>
