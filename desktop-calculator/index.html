@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <meta charset='UTF-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+        <link rel='stylesheet' href='styles.css'>
+        <script src='scripts.js' defer></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:wght@400;700&family=Indie+Flower&display=swap"
+            rel="stylesheet">
+        <title>JavaScript Calculator - AC Hulslander</title>
+    </head>
+    <body>
+        <main>
+            <div class='wrapper'>
+                <div class='display'>
+                    <p class='firstNum'></p>
+                    <p class='results'></p>
+                </div>
+                <div class='keypad'>
+                    <label class='sr-only' for='AC'>Press the escape button to
+                        clear the display completely.
+                    </label>
+                    <div class='leftCol'>
+                        <button class='key op' value='*'>*</button>
+                        <button class='key op' value='-'>-</button>
+                        <button class='key op' value='+'>+</button>
+                        <button class='key number' value='7'>7</button>
+                        <button class='key number' value='8'>8</button>
+                        <button class='key number' value='9'>9</button>
+                        <button class='key number' value='4'>4</button>
+                        <button class='key number' value='5'>5</button>
+                        <button class='key number' value='6'>6</button>
+                        <button class='key number' value='1'>1</button>
+                        <button class='key number' value='2'>2</button>
+                        <button class='key number' value='3'>3</button>
+                        <button class='key number' value='0'>0</button>
+                        <button class='key dec' value='decimal'>.</button>
+                        <button class='key' value='backspace'>&#171;</button>
+                    </div>
+                    <div class='rightCol'>
+                        <button class='key op' value='/'>/</button>
+                        <button class='key' value='equals'>=</button>
+                        <button id='AC' class='key' value='me'>AC</button>
+                    </div>
+                </div>
+            </div>
+            <div class='notepadWrapper'>
+                <div class='notepad'>
+                    <div class='header'>
+                        <h1>Calculations</h1>
+                    </div>
+                    <div class='blue'>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <div id='bannerLinks'>
+            <a target='_blank'
+                href='https://github.com/alleycaaat/'>
+                AC on GitHub
+            </a>
+            <a target='_blank' href='https://codepen.io/alleycaaat'>
+                AC on CodePen
+            </a>
+        </div>
+    </body>
+</html>

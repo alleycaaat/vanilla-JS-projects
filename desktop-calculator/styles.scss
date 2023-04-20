@@ -1,0 +1,236 @@
+$aqua: rgb(127, 255, 212);
+$cadetBlue: rgb(95, 158, 160);
+$lightAqua: rgb(220, 253, 242);
+$darkAqua: rgb(51, 96, 81);
+$darkCadetBlue: rgb(44, 72, 73);
+$box-shadow: 5px 5px 5px 0px #b2b2b2;
+$displayBG: circle, rgba(222, 255, 244, 0.7316176470588236) 44%, rgba(42, 72, 73, 0.16299019607843135) 100%;
+$keyBG: 0deg, rgba(222, 255, 244, 0.5745) 0%, rgba(127, 255, 212, 1) 18%, rgba(127, 255, 212, 1) 68%, rgba(84, 164, 137, 1) 100%;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    // border: 1px solid red;
+}
+.sr-only {
+    border: 0 !important;
+    clip: rect(1px, 1px, 1px, 1px) !important;
+    -webkit-clip-path: inset(50%) !important;
+    clip-path: inset(50%) !important;
+    height: 1px !important;
+    overflow: hidden !important;
+    margin: -1px !important;
+    padding: 0 !important;
+    position: absolute !important;
+    width: 1px !important;
+    white-space: nowrap !important;
+}
+body {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Anonymous Pro', monospace;
+    background-color: beige;
+    background-image: url(./assets/tinyBG.png);
+
+}
+body,
+.wrapper,
+.display {
+    display: flex;
+    flex-direction: column;
+}
+main {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    max-width: 95%;
+    height: 100%;
+    justify-content: center;
+    align-content: center;
+    gap: 15px;
+}
+button {
+    cursor: pointer;
+    border: none;
+    font-weight: 400;
+}
+.wrapper {
+    justify-content: center;
+    margin-top: 80px;
+    width: 280px;
+    height: 425px;
+    border-radius: 5px;
+    transform: rotate(0deg);
+    background-color: $cadetBlue;
+    border: 5px solid $cadetBlue;
+    box-shadow: 0 5px 8px $darkCadetBlue, 0 5px 15px lightGrey, 0 5px 6px $darkCadetBlue;
+    .display {
+        background: rgb(222, 255, 244);
+        background: -moz-radial-gradient($displayBG);
+        background: -webkit-radial-gradient($displayBG);
+        background: radial-gradient($displayBG);
+        height: 65px;
+        width: 95%;
+        padding: 7px 10px;
+        margin: 5px auto;
+        border-radius: 10px;
+        .results,
+        .firstNum {
+            height: 40%;
+        }
+        .firstNum {
+            font-size: 21px;
+        }
+        .results {
+            font-size: 29px;
+            font-weight: 700;
+        }
+    }
+    .keypad {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        height: 80%;
+        padding: 10px 0 15px 0;
+        .key {
+            background: rgba(255, 255, 255, 0.45);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            font-size: 25px;
+            border-radius: 5px;
+            height: 55px;
+            max-width: 55px;
+            transition-duration: 0.5s;
+            box-shadow: 0 2px 0 rgb(44, 72, 73, 0.25), 0 2px 0 lightGrey, 0 2px 6px rgba(44, 72, 73, 0.45);
+            &:hover {
+                color: rgb(62, 62, 62);
+                box-shadow: 0 1px 2px rgba(0, 0, 0, 0.45);
+                transform: translateY(3px);
+            }
+        }
+    }
+    .leftCol {
+        height: 100%;
+        width: 75%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        .key {
+            width: 29%;
+        }
+    }
+    .rightCol {
+        height: 100%;
+        width: 25%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        .key {
+            width: 100%;
+            &:nth-child(2) {
+                height: 175px;
+            }
+        }
+    }
+}
+.notepadWrapper {
+    display: none;
+    width: 50%;
+    min-width: 300px;
+    font-size: 18px;
+    margin: 80px auto 20px auto;
+    padding-bottom: 10px;
+    background-color: white;
+    box-shadow: $box-shadow;
+    transform: rotate(-15deg);
+    .notepad {
+        height: 100%;
+        overflow-y: auto;
+        font-family: Arial, Helvetica, sans-serif;
+        .header {
+            width: 100%;
+            font-family: 'Indie Flower', cursive;
+            left: 0;
+            top: -10px;
+            margin-bottom: -19px;
+            position: relative;
+            h1 {
+                padding: 8px 0 0 8px;
+                font-size: 38px;
+            }
+        }
+        // ** red line
+        .header::before {
+            content: '';
+            position: absolute;
+            border-bottom: solid rgba(255, 0, 0, 0.6);
+            width: 100%;
+            top: 43px;
+            height: 4px;
+        }
+        // ** reapeating blue lines
+        .blue {
+            display: flex;
+            flex-direction: column;
+            justify-items: center;
+            min-height: 365px;
+            background-size: 100% 25px;
+            background-image: linear-gradient(white 24px, #00b0d7 1px);
+            padding-bottom: 10px;
+            padding-left: 7px;
+            p {
+                font-family: 'Indie Flower', cursive;
+                font-size: 27px;
+                line-height: 24px;
+                margin-top: 1px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 850px) {
+    .wrapper {
+        transform: rotate(-2deg);
+        margin-right: 50px;
+    }
+    .notepadWrapper {
+        display: block !important;
+    }
+
+}
+
+#bannerLinks {
+    width: 220px;
+    height: 220px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: rotate(-45deg);
+    a {
+        display: block;
+        background: rgb(74, 0, 105);
+        color: white;
+        text-align: center;
+        line-height: 21px;
+        height: 21px;
+        font-size: 15px;
+        text-decoration: none;
+        margin: 3px;
+        font-family: Tahoma, Geneva, Verdana, sans-serif;
+        &:nth-child(2) {
+            background-color: #838383;
+        }
+        &:hover {
+            text-transform: uppercase;
+        }
+    }
+}
