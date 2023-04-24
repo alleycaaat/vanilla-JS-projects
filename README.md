@@ -85,7 +85,6 @@ AC Hulslander - [Send me a message](https://www.achulslander.com/#contact)
 
 <p align='right'>(<a href='#top'>back to top</a>)</p>
 
-
 [issues-open]: https://img.shields.io/github/issues/alleycaaat/vanilla-JS-projects?color=blue&logo=github
 [repo-size]: https://img.shields.io/github/repo-size/alleycaaat/vanilla-JS-projects?color=red&logo=github
 [language-count]: https://img.shields.io/github/languages/count/alleycaaat/vanilla-JS-projects?color=orange&logo=github
