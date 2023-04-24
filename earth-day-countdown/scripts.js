@@ -56,6 +56,7 @@ const plantTree = () => {
         treeHeight = backRow();
         top = 3;
     }
+    console.log('color:', color);
 
     let treeDescription = `z-index: -${ row } !important; margin-bottom: ${ top }px !important;`;
 
@@ -130,10 +131,10 @@ const backRow = () => {
 };
 
 const treeColor = () => {
-    return Math.floor(Math.random() * (14 - 1) + 1);
+    return Math.floor(Math.random() * (15 - 1) + 1);
 };
 const treeAmt = () => {
-    return Math.floor(Math.random() * (15 - 5) + 5);
+    return Math.floor(Math.random() * (21 - 9) + 9);
 };
 
 initClock();
