@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-weight: 700;
+  height: 100%;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  text-transform: uppercase;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 50px;
+  letter-spacing: 5px;
+}
+
+h2 {
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+.wrapper,
+.fullForest {
+  display: flex;
+  flex-direction: row;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  max-width: 450px;
+  overflow: hidden;
+  padding-top: 50px;
+}
+main h1 {
+  color: black;
+}
+main .wrapper {
+  border-radius: 10px;
+  background-color: green;
+}
+main .timer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  width: 150px;
+  color: #fff;
+  border-radius: 5px;
+  background: linear-gradient(180deg, rgb(16, 99, 27) 18%, rgb(119, 88, 74) 89%, rgb(90, 57, 42) 100%);
+}
+main .timer .days,
+main .timer .hours,
+main .timer .minutes,
+main .timer .seconds {
+  z-index: 50 !important;
+  display: flex;
+  flex-direction: column;
+  margin: 5px 30px;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  font-size: 35px;
+}
+
+.hidden {
+  display: none;
+}
+
+.display {
+  display: flex;
+}
+
+.fullForest {
+  display: flex;
+  position: relative;
+  height: 70px;
+  width: 450px;
+  z-index: 0;
+}
+.fullForest div {
+  width: 0;
+  height: 0;
+  position: absolute;
+  z-index: -1;
+}
