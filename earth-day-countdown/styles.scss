@@ -1,102 +1,147 @@
+$green0: #2c8437;
+$green1: #84c68c;
+$green2: #52a55d;
+$green3: #10631b;
+$green4: #004208;
+$green5: #2d8440;
+$green6: #82c491;
+$green7: #51a464;
+$green8: #136726;
+$green9: #014610;
+$green10: #2a7d4e;
+$green11: #7bb996;
+$green12: #4d9b6f;
+$green13: #126234;
+$green14: rgb(1, 66, 29);
+
+$brown1: rgba(168, 129, 112, 1);
+$brown2: rgba(119, 88, 74, 1);
+$brown3: rgba(90, 57, 42, 1);
+
+$trunk: 90deg, $brown3 1%, $brown2 35%, $brown1 45%, $brown2 70%, $brown3 100%;
+$soilProfile: 180deg, rgb(1, 66, 29, 0.9) 1%, rgb(51, 118, 60) 55%, rgba(119, 88, 74, 0.8) 79%, rgba(90, 57, 42, 0.9) 100%;
+$treeBranch1: 90deg, $green0 1%, $green1 100%;
+
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-
 html {
-  font-size: 16px;
+    font-size: 16px;
 }
-
 body {
-  font-weight: 700;
-  height: 100%;
-  min-height: 100vh;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+    font-weight: 700;
+    height: 100%;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Kalam', cursive;
 }
-
-h1 {
-  text-transform: uppercase;
-  color: #fff;
-  text-align: center;
-  margin-bottom: 50px;
-  letter-spacing: 5px;
-}
-
+h1,
 h2 {
-  text-transform: uppercase;
-  letter-spacing: 5px;
+    text-transform: uppercase;
+    color: $green9 !important;
+    text-align: center;
+    margin-bottom: 50px;
+    letter-spacing: 3px;
+    line-height: 31px;
+    font-size: 29px;
+    padding: 0 15px;
 }
-
+h2 {
+    font-size: 35px;
+}
+main,
+.timer,
+.timer div {
+    display: flex;
+    flex-direction: column;
+}
 .wrapper,
-.fullForest {
-  display: flex;
-  flex-direction: row;
+.forest {
+    display: flex;
+    flex-direction: row;
+    margin: 0px auto;
+    width: 290px;
 }
-
 main {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  max-width: 450px;
-  overflow: hidden;
-  padding-top: 50px;
+    height: 100%;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    padding-top: 50px;
+    background-color: palegoldenrod;
+    .forest {
+        display: flex;
+        position: relative;
+        margin: 50px auto -5px auto;
+        z-index: 15;
+        .tree-wrap {
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: center;
+            position: relative;
+        }
+        .tree {
+            width: 0;
+            height: 0;
+            position: absolute;
+            border-radius: 5px;
+        }
+        .trunk {
+            background-color: $brown2 !important;
+            width: 5px;
+            height: 10px;
+            position: absolute;
+        }
+    }
+    .wrapper {
+        border-radius: 5px;
+        margin-bottom: 5px;
+        background: -moz-linear-gradient($soilProfile);
+        background: -webkit-linear-gradient($soilProfile);
+        background: linear-gradient($soilProfile);
+        .timer {
+            justify-content: center;
+            align-items: center;
+            height: 150px;
+            width: 25%;
+            color: #fff;
+            font-weight: 300;
+            z-index: 1;
+            div {
+                margin: 5px 30px;
+                justify-content: center;
+                align-items: center;
+                font-size: 35px;
+            }
+            p {
+                margin-top: 15px;
+            }
+        }
+    }
 }
-main h1 {
-  color: black;
-}
-main .wrapper {
-  border-radius: 10px;
-  background-color: green;
-}
-main .timer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 150px;
-  width: 150px;
-  color: #fff;
-  border-radius: 5px;
-  background: linear-gradient(180deg, rgb(16, 99, 27) 18%, rgb(119, 88, 74) 89%, rgb(90, 57, 42) 100%);
-}
-main .timer .days,
-main .timer .hours,
-main .timer .minutes,
-main .timer .seconds {
-  z-index: 50 !important;
-  display: flex;
-  flex-direction: column;
-  margin: 5px 30px;
-  height: 100%;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-  font-size: 35px;
-}
-
 .hidden {
-  display: none;
+    display: none;
 }
-
 .display {
-  display: flex;
+    display: flex;
 }
-
-.fullForest {
-  display: flex;
-  position: relative;
-  height: 70px;
-  width: 450px;
-  z-index: 0;
-}
-.fullForest div {
-  width: 0;
-  height: 0;
-  position: absolute;
-  z-index: -1;
+@media screen and (min-width: 500px) {
+    .wrapper,
+    .fullForest {
+        width: 450px;
+    }
+    h1,
+    h2 {
+        line-height: 39px;
+        font-size: 33px;
+    }
+    h2 {
+        font-size: 49px;
+    }
 }
