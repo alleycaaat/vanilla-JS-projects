@@ -100,4 +100,4 @@ AC Hulslander - [Send me a message](https://www.achulslander.com/#contact)
 [hashnode]: https://img.shields.io/badge/Hashnode-2962FF?style=for-the-badge&logo=hashnode&logoColor=white
 [hashnode-url]: https://hashnode.com/@alleycaaat
 [discord]:https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white
-[discord-url]: https://discordapp.come/users/427569685366833174
+[discord-url]: https://discord.come/users/427569685366833174
