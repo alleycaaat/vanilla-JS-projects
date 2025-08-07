@@ -54,6 +54,18 @@ This repo is composed of vanilla JavaScript projects.  All projects were develop
 
 <br>
 
+### <strong>wordle</strong>
+![A completed game of wordle that the player solved in three guesses](./assets/gameplay.png)
+
+[Working demo of wordle](https://achulslander-wordle.netlify.app)
+- users can play on screen or using their computer keyboard
+- if a letter is in the answer but isn't in the right position, it is highlighted yellow
+- a correct letter in the correct spot is highlighted purple
+- after five guesses, tellers player if they have won or run out of guesses
+- utilizes forEach and if/else loops
+
+<br>
+
 ### <strong>Calculator</strong>
 ![A calculator with aquamarine buttons and a screen displaying '43110'](./assets/js-calculator.png)
 
@@ -79,7 +91,6 @@ AC Hulslander - [Send me a message](https://www.achulslander.com/#contact)
 [![hashnode][hashnode]][hashnode-url]
 [![discord][discord]][discord-url]
 [![codepen][codepen]][codepen-url]
-[![twitter][twitter]][twitter-url]
 </div>
 
 
@@ -95,8 +106,6 @@ AC Hulslander - [Send me a message](https://www.achulslander.com/#contact)
 [github]: https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white
 [codepen]: https://img.shields.io/badge/Codepen-000000?style=for-the-badge&logo=codepen&logoColor=white
 [codepen-url]: https://codepen.io/alleycaaat
-[twitter]: https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white
-[twitter-url]: https://twitter.com/achulslander
 [hashnode]: https://img.shields.io/badge/Hashnode-2962FF?style=for-the-badge&logo=hashnode&logoColor=white
 [hashnode-url]: https://hashnode.com/@alleycaaat
 [discord]:https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white
