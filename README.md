@@ -55,7 +55,7 @@ This repo is composed of vanilla JavaScript projects.  All projects were develop
 <br>
 
 ### <strong>wordle</strong>
-![A completed game of wordle that the player solved in three guesses](./assets/wordle.png)
+![A completed game of wordle that the player solved in three guesses](./assets/wordle.PNG)
 
 [Working demo of wordle](https://achulslander-wordle.netlify.app)
 - users can play on screen or using their computer keyboard
